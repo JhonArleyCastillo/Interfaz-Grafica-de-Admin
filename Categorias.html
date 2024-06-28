@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Administrativo</title>
+    <link href="./style.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  </head>
+  <body>
+    <nav class="nav navbar-expand-lg bg-body-tertiary sticky-top">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Administrador</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#Clientes" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Clientes
+                    </a>
+                    <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#Clientes">Cantidad de clientes</a></li>
+                    <li><a class="dropdown-item" href="#Pedidos">Cantidad de pedidos</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item" href="#Productos">Cantidad de productos</a></li>
+                  </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#Usuarios">Usuarios</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#Categorias">Categorias</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#Productos">Productos</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#Pedidos">Pedidos</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Perfil de usuario
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="./Perfil.html">Actualizar datos</a></li>
+                  <li><a class="dropdown-item" href="./Perfil.html">Cambiar contraseña</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="./index.html">Salir</a></li>
+                </ul>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+      
+    <div class="container">
+      <h1 class="text-center" id="Categorias">Categorias</h1>
+      <!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#ModalCategories">
+  Ingresar Nueva Categoria
+</button>
+
+<!-- Modal New Categories-->
+<div class="modal fade" id="ModalCategories" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Nueva Categoria</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="mb-3">
+          <label for="exampleFormControlTextarea1" class="form-label">Codigo</label>
+          <textarea class="form-control" id="exampleFormControlTextarea1" rows="1"></textarea>
+        </div>
+        <div class="mb-3">
+          <label for="exampleFormControlTextarea1" class="form-label">Nombre</label>
+          <textarea class="form-control" id="exampleFormControlTextarea1" rows="1"></textarea>
+        </div>
+        <div class="input-group mb-3">
+          <label for="exampleFormControlTextarea1" class="form-label">Imagen</label>
+          <input type="file" class="form-control" id="inputGroupFile02">
+          <label class="input-group-text" for="inputGroupFile02">Upload</label>
+        </div>
+        <div class="mb-3">
+          <label for="exampleFormControlTextarea1" class="form-label">Descripción</label>
+          <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+        </div>
+        <div class="mb-3">
+          <label for="exampleFormControlTextarea1" class="form-label">Fecha</label>
+          <textarea class="form-control" id="exampleFormControlTextarea1" rows="1"></textarea>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#ModalModifyCategories">
+  Modificar Categoria
+</button>
+
+<!-- Modal Categories-->
+<div class="modal fade" id="ModalModifyCategories" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Modificar Categoria</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form class="d-flex" role="search">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">SearchCategories</button>
+        </form>
+        <table class="table-responsive">
+          <thead>
+            <tr>
+              <th scope="col">Codigo</th>
+              <th scope="col">Nombre</th>
+              <th scope="col">Imagen</th>
+              <th scope="col">Descripción</th>
+              <th scope="col">Fecha</th>
+              <th scope="col">...</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">...</th>
+            </tr>
+          </tbody> 
+        </table>  
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+    <table class="table-responsive">
+        <thead>
+          <tr>
+            <th scope="col">Codigo</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">Imagen</th>
+            <th scope="col">Descripcion</th>
+            <th scope="col">Fecha</th>
+            <th scope="col">Acciones</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td>belleza</td>
+            <td><img class="img1" src="./img/logo-ova-fondo-blanco.png" alt=""></td>
+            <td>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cupiditate, in veritatis distinctio, earum incidunt harum officia numquam debitis nemo ex laborum nihil necessitatibus architecto doloribus neque excepturi mollitia nulla quos laudantium natus, omnis ab? Laborum nisi, praesentium illo animi modi a reiciendis. Blanditiis beatae fugit ut corrupti, nisi tempore quas!</td>
+            <td>12/05/23</td>
+            <td>
+              <img class="imgicon active" type="submit" src="./img/pen-solid.svg" alt="Editar" title="Editar">
+              <img class="imgicon active" type="submit" src="./img/bag-check-fill.svg" alt="Habilitar" title="Habilitar">
+              <img class="imgicon active" type="submit" src="./img/bag-x-fill.svg" alt="InHabilitar" title="Inhabilitar">
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td>comida</td>
+            <td><img class="img1" src="./img/logo-ova-fondo-blanco.png" alt=""></td>
+            <td>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolore, quasi officiis! Quos corrupti voluptatem explicabo saepe iure quis similique sapiente dignissimos illo sit, culpa odio hic nesciunt quidem excepturi est vel distinctio ad, doloremque quam doloribus maxime necessitatibus? Et molestiae neque nihil hic error maxime minima ab? Non, neque animi.</td>
+            <td>12/05/23</td>
+            <td>
+              <img class="imgicon active" type="submit" src="./img/pen-solid.svg" alt="Editar" title="Editar">
+              <img class="imgicon active" type="submit" src="./img/bag-check-fill.svg" alt="Habilitar" title="Habilitar">
+              <img class="imgicon active" type="submit" src="./img/bag-x-fill.svg" alt="InHabilitar" title="Inhabilitar">
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">3</th>
+            <td>deporte</td>
+            <td><img class="img1" src="./img/logo-ova-fondo-blanco.png" alt=""></td>
+            <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure amet, nam blanditiis fuga qui earum non doloribus illum hic eligendi labore obcaecati molestias quidem illo quod alias! Molestiae, doloribus ut odio suscipit, facere fugit dolorem maiores est illum porro commodi adipisci impedit nesciunt culpa. Nemo ut sed debitis modi ullam!</td>
+            <td>12/05/23</td>
+            <td>
+              <img class="imgicon active" type="submit" src="./img/pen-solid.svg" alt="Editar" title="Editar">
+              <img class="imgicon active" type="submit" src="./img/bag-check-fill.svg" alt="Habilitar" title="Habilitar">
+              <img class="imgicon active" type="submit" src="./img/bag-x-fill.svg" alt="InHabilitar" title="Inhabilitar">
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  </body>
+</html>
